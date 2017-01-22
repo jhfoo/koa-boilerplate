@@ -1,6 +1,21 @@
 <html>
 
+<head>
+  <script src="/socket.io/socket.io.js"/></script>
+</head>
+
 <body>
   Hello World!</body>
-
+<script>
+  var socket = io('http://localhost:8080');
+  socket.on('connect', function () {
+    console.log('Connected via socket.io');
+    var RanNum = parseInt(Math.random() * 100);
+    console.log('Send ' + RanNum + ' to PINGY event');
+    socket.emit('pingy', RanNum);
+  });
+  socket.on('pingy', function(data) {
+    console.log('PINGY: ' + data);
+  });
+</script>
 </html>

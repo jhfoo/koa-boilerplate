@@ -1,5 +1,5 @@
 {
   "WebService": {
-    "ServicePort": 8008
+    "ServicePort": 8080
   }
 }

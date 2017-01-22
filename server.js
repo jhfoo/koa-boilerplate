@@ -3,6 +3,7 @@ var fs = require('fs'),
   KoaStatic = require('koa-static'),
   router = require('koa-router')(),
   log4js = require('log4js'),
+  http = require('http'),
   TestRoute = require('./lib/test');
 
 // constants
@@ -10,6 +11,8 @@ var DEFAULT_CONFIG_FILENAME = 'defaults.json',
   CONFIG_FILENAME = 'config.json';
 
 var app = koa(),
+  server = http.createServer(app.callback()),
+  io = require('socket.io')(server),
   logger = log4js.getLogger(),
   config = loadConfig(CONFIG_FILENAME);
 
@@ -57,8 +60,20 @@ app.on('error', function (err) {
   logger.error(err);
 });
 
+// setup socket.io events
+io.on('connection', (socket) => {
+  logger.debug('New Socket.io connection');
+  // NOTE: PING is a reserved event!
+  socket.on('pingy', (data) => {
+    logger.debug('PINGY received: ' + data);
+    socket.emit('pingy','pongy: ' + data);
+  });
+});
+
+
 // start listening
-app.listen(config.WebService.ServicePort);
+// NOTE: app.listen() doesn't enable socket.io. Use server.listen()
+server.listen(config.WebService.ServicePort);
 logger.info('Listening on port ' + config.WebService.ServicePort);
 
 function loadConfig(filename) {
@@ -78,7 +93,6 @@ function applyDefaults(config, defaults) {
     if (!(key in config))
       config[key] = defaults[key];
     else {
-      logger.debug(key + ' = ' + typeof (defaults[key]));
       if (typeof defaults[key] === 'object')
         applyDefaults(config[key], defaults[key]);
     }
