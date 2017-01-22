@@ -19,6 +19,7 @@
   "homepage": "https://github.com/jhfoo/koa-boilerplate#readme",
   "dependencies": {
     "koa": "^1.2.4",
+    "koa-router": "^5.4.0",
     "koa-static": "^2.0.0",
     "log4js": "^1.1.0"
   },
