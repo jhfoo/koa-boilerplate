@@ -2,7 +2,8 @@ var fs = require('fs'),
   koa = require('koa'),
   KoaStatic = require('koa-static'),
   router = require('koa-router')(),
-  log4js = require('log4js');
+  log4js = require('log4js'),
+  TestRoute = require('./lib/test');
 
 // constants
 var DEFAULT_CONFIG_FILENAME = 'defaults.json',
@@ -41,13 +42,8 @@ app.use(function* (next) {
 });
 
 // custom responses load here
-router.get('/error', function *(next) {
-  this.body = 'boo';
-  throw new Error('Oh noes!');
-
-});
-app.use(router.routes());
-app.use(router.allowedMethods());
+app.use(TestRoute.routes());
+// app.use(router.allowedMethods());
 
 // setup static folder
 if (!fs.existsSync(__dirname + '/' + config.WebService.PublicPath)) {
