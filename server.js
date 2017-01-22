@@ -1,12 +1,24 @@
 var fs = require('fs'),
   koa = require('koa'),
+  KoaStatic = require('koa-static'),
   log4js = require('log4js');
+
+// constants
+var DEFAULT_CONFIG_FILENAME = 'defaults.json',
+  CONFIG_FILENAME = 'config.json';
 
 var app = koa(),
   logger = log4js.getLogger(),
-  CONFIG_FILENAME = 'config.json',
   config = loadConfig(CONFIG_FILENAME);
 
+// koa middlewares
+if (!fs.existsSync(__dirname + '/' + config.WebService.PublicPath)) {
+  fs.mkdirSync(__dirname + '/' + config.WebService.PublicPath);
+}
+app.use(KoaStatic(__dirname + '/' + config.WebService.PublicPath));
+logger.info('Public folder: ' + '/' + config.WebService.PublicPath);
+
+// start listening
 app.listen(config.WebService.ServicePort);
 logger.info('Listening on port ' + config.WebService.ServicePort);
 
@@ -17,11 +29,9 @@ function loadConfig(filename) {
   var RawJson = fs.readFileSync(filename, {
     encoding: 'utf8'
   });
-  logger.debug(typeof RawJson );
-  logger.debug('"' + RawJson + '"');
 
   return applyDefaults(RawJson === '' ? {} : JSON.parse(RawJson), 
-    JSON.parse(fs.readFileSync('defaults.json')));
+    JSON.parse(fs.readFileSync(DEFAULT_CONFIG_FILENAME)));
 }
 
 function applyDefaults(config, defaults) {

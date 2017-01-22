@@ -1,5 +1,6 @@
 {
   "WebService" : {
-    "ServicePort" : 8080
+    "ServicePort" : 8080,
+    "PublicPath" : "www"
   }
 }
