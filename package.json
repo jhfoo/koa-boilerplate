@@ -1,0 +1,24 @@
+{
+  "name": "koa-boilerplate",
+  "version": "1.0.0",
+  "description": "\"# koa-boilerplate\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jhfoo/koa-boilerplate.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jhfoo/koa-boilerplate/issues"
+  },
+  "homepage": "https://github.com/jhfoo/koa-boilerplate#readme",
+  "dependencies": {
+    "koa": "^1.2.4",
+    "log4js": "^1.1.0"
+  }
+}
