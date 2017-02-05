@@ -7,15 +7,21 @@
 <body>
   Hello World!</body>
 <script>
-  var socket = io();
-  socket.on('connect', function () {
-    console.log('Connected via socket.io');
-    var RanNum = parseInt(Math.random() * 100);
-    console.log('Send ' + RanNum + ' to PINGY event');
-    socket.emit('pingy', RanNum);
-  });
-  socket.on('pingy', function(data) {
-    console.log('PINGY: ' + data);
-  });
+  // optional: connect to socket.io service
+  connect2SocketIo();
+
+  function connect2SocketIo() {
+    var socket = io();
+    socket.on('connect', function () {
+      console.log('Connected via socket.io');
+      var RanNum = parseInt(Math.random() * 100);
+      console.log('Send ' + RanNum + ' to PINGY event');
+      socket.emit('pingy', RanNum);
+    });
+    socket.on('pingy', function(data) {
+      console.log('PINGY: ' + data);
+    });
+  }
+
 </script>
 </html>
