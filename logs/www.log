@@ -1,0 +1,144 @@
+[2017-07-09 11:16:55.581] [INFO] default - Public folder: /www
+[2017-07-09 11:16:55.585] [INFO] default - Listening on port 8080
+[2017-07-09 11:16:56.871] [INFO] default - Public folder: /www
+[2017-07-09 11:16:56.875] [INFO] default - Listening on port 8080
+[2017-07-09 11:17:02.301] [INFO] default - Public folder: /www
+[2017-07-09 11:17:02.306] [INFO] default - Listening on port 8080
+[2017-07-09 11:17:26.392] [INFO] default - Public folder: /www
+[2017-07-09 11:17:26.396] [INFO] default - Listening on port 8080
+[2017-07-09 11:17:27.671] [INFO] default - Public folder: /www
+[2017-07-09 11:17:27.675] [INFO] default - Listening on port 8080
+[2017-07-09 11:17:42.449] [INFO] default - Public folder: /www
+[2017-07-09 11:17:42.453] [INFO] default - Listening on port 8080
+[2017-07-09 11:17:43.758] [INFO] default - Public folder: /www
+[2017-07-09 11:17:43.762] [INFO] default - Listening on port 8080
+[2017-07-09 11:17:47.365] [INFO] default - Public folder: /www
+[2017-07-09 11:17:47.369] [INFO] default - Listening on port 8080
+[2017-07-09 11:17:49.155] [INFO] default - Public folder: /www
+[2017-07-09 11:17:49.159] [INFO] default - Listening on port 8080
+[2017-07-09 11:17:53.897] [DEBUG] default - undefined undefined - 1
+[2017-07-09 11:18:02.826] [DEBUG] default - undefined undefined - 0
+[2017-07-09 11:18:08.110] [INFO] default - Public folder: /www
+[2017-07-09 11:18:08.115] [INFO] default - Listening on port 8080
+[2017-07-09 11:18:09.118] [INFO] default - Public folder: /www
+[2017-07-09 11:18:09.122] [INFO] default - Listening on port 8080
+[2017-07-09 11:25:32.330] [INFO] default - Public folder: /www
+[2017-07-09 11:25:32.334] [INFO] default - Listening on port 8080
+[2017-07-09 11:25:33.616] [INFO] default - Public folder: /www
+[2017-07-09 11:25:33.620] [INFO] default - Listening on port 8080
+[2017-07-09 11:25:43.970] [INFO] default - Public folder: /www
+[2017-07-09 11:25:43.977] [INFO] default - Listening on port 8080
+[2017-07-09 11:25:58.966] [DEBUG] default - undefined undefined - 0
+[2017-07-09 11:26:22.709] [INFO] default - Public folder: /www
+[2017-07-09 11:26:22.713] [INFO] default - Listening on port 8080
+[2017-07-09 11:26:24.170] [INFO] default - Public folder: /www
+[2017-07-09 11:26:24.174] [INFO] default - Listening on port 8080
+[2017-07-09 11:26:24.572] [DEBUG] default - GET undefined - 1
+[2017-07-09 11:26:31.791] [INFO] default - Public folder: /www
+[2017-07-09 11:26:31.795] [INFO] default - Listening on port 8080
+[2017-07-09 11:26:33.175] [INFO] default - Public folder: /www
+[2017-07-09 11:26:33.179] [INFO] default - Listening on port 8080
+[2017-07-09 11:26:33.748] [DEBUG] default - GET /index.html - 1
+[2017-07-09 11:27:08.117] [INFO] default - Public folder: /www
+[2017-07-09 11:27:08.121] [INFO] default - Listening on port 8080
+[2017-07-09 11:27:09.126] [INFO] default - Public folder: /www
+[2017-07-09 11:27:09.131] [INFO] default - Listening on port 8080
+[2017-07-09 11:27:11.945] [INFO] default - Public folder: /www
+[2017-07-09 11:27:11.949] [INFO] default - Listening on port 8080
+[2017-07-09 11:27:13.499] [INFO] default - Public folder: /www
+[2017-07-09 11:27:13.505] [INFO] default - Listening on port 8080
+[2017-07-09 11:27:22.485] [DEBUG] default - GET /index.html - 1
+[2017-07-09 11:30:08.082] [INFO] default - Public folder: /www
+[2017-07-09 11:30:08.086] [INFO] default - Listening on port 8080
+[2017-07-09 11:30:09.738] [INFO] default - Public folder: /www
+[2017-07-09 11:30:09.742] [INFO] default - Listening on port 8080
+[2017-07-09 11:30:12.803] [INFO] default - Public folder: /www
+[2017-07-09 11:30:12.807] [INFO] default - Listening on port 8080
+[2017-07-09 11:30:14.143] [INFO] default - Public folder: /www
+[2017-07-09 11:30:14.147] [INFO] default - Listening on port 8080
+[2017-07-09 11:30:19.860] [DEBUG] default - GET /index.html - 1
+[2017-07-09 11:30:45.065] [DEBUG] default - GET /index.html - 1
+[2017-07-09 11:31:12.735] [INFO] default - Public folder: /www
+[2017-07-09 11:31:12.739] [INFO] default - Listening on port 8080
+[2017-07-09 11:31:13.924] [DEBUG] default - GET /index.html - 3
+[2017-07-09 11:31:39.095] [INFO] default - Public folder: E:\JhCodes\koa-boilerplate/www
+[2017-07-09 11:31:39.098] [INFO] default - Listening on port 8080
+[2017-07-09 11:31:40.534] [INFO] default - Public folder: E:\JhCodes\koa-boilerplate/www
+[2017-07-09 11:31:40.540] [INFO] default - Listening on port 8080
+[2017-07-09 11:32:12.221] [INFO] default - Public folder: E:\JhCodes\koa-boilerplate/www
+[2017-07-09 11:32:12.228] [INFO] default - Listening on port 8080
+[2017-07-09 11:32:14.621] [DEBUG] default - GET /index.html - 2
+[2017-07-09 11:32:15.568] [DEBUG] default - GET /index.html - 0
+[2017-07-09 11:33:08.125] [INFO] default - Public folder: E:\JhCodes\koa-boilerplate/www
+[2017-07-09 11:33:08.130] [INFO] default - Listening on port 8080
+[2017-07-09 11:33:09.092] [INFO] default - Public folder: E:\JhCodes\koa-boilerplate/www
+[2017-07-09 11:33:09.097] [INFO] default - Listening on port 8080
+[2017-07-09 11:33:09.833] [INFO] default - Public folder: E:\JhCodes\koa-boilerplate/www
+[2017-07-09 11:33:09.838] [INFO] default - Listening on port 8080
+[2017-07-09 11:33:11.112] [INFO] default - Public folder: E:\JhCodes\koa-boilerplate/www
+[2017-07-09 11:33:11.117] [INFO] default - Listening on port 8080
+[2017-07-09 11:33:17.996] [INFO] default - Public folder: E:\JhCodes\koa-boilerplate/www
+[2017-07-09 11:33:18.002] [INFO] default - Listening on port 8080
+[2017-07-09 11:33:19.362] [INFO] default - Public folder: E:\JhCodes\koa-boilerplate/www
+[2017-07-09 11:33:19.368] [INFO] default - Listening on port 8080
+[2017-07-09 11:33:23.115] [DEBUG] default - GET /index.html - 1
+[2017-07-09 11:33:23.905] [DEBUG] default - GET /index.html - 0
+[2017-07-09 11:33:24.291] [DEBUG] default - GET /index.html - 0
+[2017-07-09 11:33:36.158] [INFO] default - Public folder: E:\JhCodes\koa-boilerplate/www
+[2017-07-09 11:33:36.164] [INFO] default - Listening on port 8080
+[2017-07-09 11:33:38.513] [DEBUG] default - GET /index.html - 1
+[2017-07-09 11:33:39.111] [DEBUG] default - GET /index.html - 0
+[2017-07-09 11:33:39.351] [DEBUG] default - GET /index.html - 0
+[2017-07-09 11:33:39.557] [DEBUG] default - GET /index.html - 0
+[2017-07-09 11:34:00.104] [INFO] default - Public folder: E:\JhCodes\koa-boilerplate/www
+[2017-07-09 11:34:00.108] [INFO] default - Listening on port 8080
+[2017-07-09 11:34:01.429] [INFO] default - Public folder: E:\JhCodes\koa-boilerplate/www
+[2017-07-09 11:34:01.433] [INFO] default - Listening on port 8080
+[2017-07-09 11:34:03.972] [DEBUG] default - New Socket.io connection
+[2017-07-09 11:34:04.019] [DEBUG] default - PINGY received: 51
+[2017-07-09 11:34:16.825] [INFO] default - Public folder: E:\JhCodes\koa-boilerplate/www
+[2017-07-09 11:34:16.829] [INFO] default - Listening on port 8080
+[2017-07-09 11:34:17.192] [DEBUG] default - New Socket.io connection
+[2017-07-09 11:34:17.217] [DEBUG] default - PINGY received: 63
+[2017-07-09 11:34:18.129] [INFO] default - Public folder: E:\JhCodes\koa-boilerplate/www
+[2017-07-09 11:34:18.133] [INFO] default - Listening on port 8080
+[2017-07-09 11:34:18.609] [DEBUG] default - New Socket.io connection
+[2017-07-09 11:34:18.628] [DEBUG] default - PINGY received: 41
+[2017-07-09 11:34:19.521] [DEBUG] default - GET /index.html - 0
+[2017-07-09 11:34:20.333] [DEBUG] default - GET /index.html - 0
+[2017-07-09 11:34:20.645] [DEBUG] default - GET /index.html - 0
+[2017-07-09 11:34:20.875] [DEBUG] default - GET /index.html - 0
+[2017-07-09 11:35:04.850] [INFO] default - Public folder: E:\JhCodes\koa-boilerplate/www
+[2017-07-09 11:35:04.854] [INFO] default - Listening on port 8080
+[2017-07-09 11:35:06.123] [INFO] default - Public folder: E:\JhCodes\koa-boilerplate/www
+[2017-07-09 11:35:06.128] [INFO] default - Listening on port 8080
+[2017-07-09 11:35:12.659] [DEBUG] default - GET /index.html - 1
+[2017-07-09 11:35:21.170] [INFO] default - Public folder: E:\JhCodes\koa-boilerplate/www
+[2017-07-09 11:35:21.174] [INFO] default - Listening on port 8080
+[2017-07-09 11:35:22.371] [INFO] default - Public folder: E:\JhCodes\koa-boilerplate/www
+[2017-07-09 11:35:22.375] [INFO] default - Listening on port 8080
+[2017-07-09 11:36:03.219] [INFO] default - Public folder: E:\JhCodes\koa-boilerplate/www
+[2017-07-09 11:36:03.223] [INFO] default - Listening on port 8080
+[2017-07-09 11:36:04.574] [INFO] default - Public folder: E:\JhCodes\koa-boilerplate/www
+[2017-07-09 11:36:04.578] [INFO] default - Listening on port 8080
+[2017-07-09 11:36:08.082] [INFO] default - Public folder: E:\JhCodes\koa-boilerplate/www
+[2017-07-09 11:36:08.087] [INFO] default - Listening on port 8080
+[2017-07-09 11:36:08.381] [DEBUG] default - GET /index.html - 13
+[2017-07-09 11:36:09.156] [INFO] default - Public folder: E:\JhCodes\koa-boilerplate/www
+[2017-07-09 11:36:09.161] [INFO] default - Listening on port 8080
+[2017-07-09 11:36:09.187] [DEBUG] default - New Socket.io connection
+[2017-07-09 11:36:09.224] [DEBUG] default - PINGY received: 68
+[2017-07-09 11:36:31.829] [INFO] default - Public folder: E:\JhCodes\koa-boilerplate/www
+[2017-07-09 11:36:31.833] [INFO] default - Listening on port 8080
+[2017-07-09 11:36:33.109] [INFO] default - Public folder: E:\JhCodes\koa-boilerplate/www
+[2017-07-09 11:36:33.114] [INFO] default - Listening on port 8080
+[2017-07-09 11:36:33.174] [DEBUG] default - New Socket.io connection
+[2017-07-09 11:36:33.195] [DEBUG] default - PINGY received: 20
+[2017-07-09 11:36:33.559] [DEBUG] default - GET /index.html - 0
+[2017-07-09 11:36:41.310] [INFO] default - Public folder: E:\JhCodes\koa-boilerplate/www
+[2017-07-09 11:36:41.314] [INFO] default - Listening on port 8080
+[2017-07-09 11:36:42.685] [INFO] default - Public folder: E:\JhCodes\koa-boilerplate/www
+[2017-07-09 11:36:42.690] [INFO] default - Listening on port 8080
+[2017-07-09 11:36:42.777] [DEBUG] default - GET /index.html - 7
+[2017-07-09 11:36:42.952] [DEBUG] default - New Socket.io connection
+[2017-07-09 11:36:42.993] [DEBUG] default - PINGY received: 4

@@ -1,6 +1,12 @@
 {
-  "WebService" : {
-    "ServicePort" : 8080,
-    "PublicPath" : "www"
+  "logging": {
+    "LogPath": "logs",
+    "filename": "server",
+    "backups": 7,
+    "MaxFileSize": 65536
+  },
+  "WebService": {
+    "ServicePort": 8080,
+    "PublicPath": "www"
   }
 }

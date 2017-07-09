@@ -1,3 +1,7 @@
+// constants
+const DEFAULT_CONFIG_FILENAME = 'defaults.json',
+  CONFIG_FILENAME = 'config.json';
+
 var fs = require('fs'),
   koa = require('koa'),
   KoaStatic = require('koa-static'),
@@ -6,29 +10,63 @@ var fs = require('fs'),
   http = require('http'),
   TestRoute = require('./lib/test');
 
-// constants
-var DEFAULT_CONFIG_FILENAME = 'defaults.json',
-  CONFIG_FILENAME = 'config.json';
+// console logging only before config is loaded
+log4js.configure({
+  appenders: {
+    console: {
+      type: 'stdout'
+    }
+  },
+  categories: {
+    default: {
+      appenders: ['console'],
+      level: 'debug'
+    }
+  }
+});
 
-var app = koa(),
+var app = new koa(),
   server = http.createServer(app.callback()),
   io = require('socket.io')(server),
   logger = log4js.getLogger(),
   config = loadConfig(CONFIG_FILENAME);
 
+// include file logging after config is loaded
+log4js.configure({
+  appenders: {
+    console: {
+      type: 'stdout'
+    },
+    file: {
+      type: 'file',
+      filename: __dirname + '/' + config.logging.LogPath + '/www.log',
+      maxLogSize: 64 * 1024,
+      backups: 7
+    }
+  },
+  categories: {
+    default: {
+      appenders: ['console', 'file'],
+      level: 'debug'
+    }
+  }
+});
+
+autoCreateFolders();
+
 // koa middlewares
 // logger
-app.use(function* (next) {
+app.use(async(ctx, next) => {
   var start = new Date;
-  yield next;
+  await next();
   var ms = new Date - start;
-  logger.debug('%s %s - %s', this.method, this.url, ms);
+  logger.debug('%s %s - %s', ctx.method, ctx.url, ms);
 });
 
 // custom error response
-app.use(function* (next) {
+app.use(async(ctx, next) => {
   try {
-    yield next;
+    await next();
   } catch (err) {
     // some errors will have .status
     // however this is not a guarantee
@@ -45,15 +83,13 @@ app.use(function* (next) {
 });
 
 // custom responses load here
-app.use(TestRoute.routes());
+// app.use(TestRoute.routes());
 // app.use(router.allowedMethods());
 
-// setup static folder
-if (!fs.existsSync(__dirname + '/' + config.WebService.PublicPath)) {
-  fs.mkdirSync(__dirname + '/' + config.WebService.PublicPath);
-}
-app.use(KoaStatic(__dirname + '/' + config.WebService.PublicPath));
-logger.info('Public folder: ' + '/' + config.WebService.PublicPath);
+app.use(KoaStatic(__dirname + '/' + config.WebService.PublicPath, {
+  index: 'index.html'
+}));
+logger.info('Public folder: ' + __dirname + '/' + config.WebService.PublicPath);
 
 // error handler
 app.on('error', function (err) {
@@ -66,7 +102,7 @@ io.on('connection', (socket) => {
   // NOTE: PING is a reserved event!
   socket.on('pingy', (data) => {
     logger.debug('PINGY received: ' + data);
-    socket.emit('pingy','pongy: ' + data);
+    socket.emit('pingy', 'pongy: ' + data);
   });
 });
 
@@ -75,6 +111,19 @@ io.on('connection', (socket) => {
 // NOTE: app.listen() doesn't enable socket.io. Use server.listen()
 server.listen(config.WebService.ServicePort);
 logger.info('Listening on port ' + config.WebService.ServicePort);
+
+function autoCreateFolders() {
+  // setup static folder
+  if (!fs.existsSync(__dirname + '/' + config.WebService.PublicPath)) {
+    fs.mkdirSync(__dirname + '/' + config.WebService.PublicPath);
+  }
+
+  // setup log folder
+  if (!fs.existsSync(__dirname + '/' + config.logging.LogPath)) {
+    logger.info('Creating folder: ' + config.logging.LogPath);
+    fs.mkdirSync(__dirname + '/' + config.logging.LogPath);
+  }
+}
 
 function loadConfig(filename) {
   // auto create
@@ -90,11 +139,13 @@ function loadConfig(filename) {
 
 function applyDefaults(config, defaults) {
   Object.keys(defaults).forEach((key) => {
-    if (!(key in config))
-      config[key] = defaults[key];
-    else {
+    logger.debug('Matching key ' + key);
+    if (key in config) {
+      logger.info('Overriding default key: ' + key);
       if (typeof defaults[key] === 'object')
         applyDefaults(config[key], defaults[key]);
+    } else {
+      config[key] = defaults[key];
     }
   });
   return config;
