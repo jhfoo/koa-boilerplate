@@ -1,7 +1,3 @@
-// constants
-const DEFAULT_CONFIG_FILENAME = 'defaults.json',
-  CONFIG_FILENAME = 'config.json';
-
 var fs = require('fs'),
   path = require('path'),
   koa = require('koa'),
@@ -9,6 +5,7 @@ var fs = require('fs'),
   router = require('koa-router')(),
   log4js = require('log4js'),
   http = require('http'),
+  ServerHelper = require('./lib/ServerHelper'),
   TestRoute = require('./lib/test');
 
 // console logging only before config is loaded
@@ -30,10 +27,9 @@ var app = new koa(),
   server = http.createServer(app.callback()),
   io = require('socket.io')(server),
   logger = log4js.getLogger(),
-  config = loadConfig(CONFIG_FILENAME);
+  config = ServerHelper.loadConfig(ServerHelper.CONFIG_FILENAME);
 
 // include file logging after config is loaded
-logger.debug(config.logging.FinalLogPath);
 log4js.configure({
   appenders: {
     console: {
@@ -41,7 +37,7 @@ log4js.configure({
     },
     file: {
       type: 'file',
-      filename: config.logging.FinalLogPath + '/www.log',
+      filename: config.logging.FinalLogPath + '/' + config.logging.filename + '.log',
       maxLogSize: 64 * 1024,
       backups: 7
     }
@@ -54,7 +50,7 @@ log4js.configure({
   }
 });
 
-autoCreateFolders();
+ServerHelper.autoCreateFolders(config);
 
 // koa middlewares
 // logger
@@ -115,48 +111,3 @@ io.on('connection', (socket) => {
 server.listen(config.WebService.ServicePort);
 logger.info('Listening on port ' + config.WebService.ServicePort);
 
-function autoCreateFolders() {
-  // setup static folder
-  if (!fs.existsSync(config.WebService.FinalPublicPath)) {
-    fs.mkdirSync(config.WebService.FinalPublicPath);
-  }
-
-  // setup log folder
-  if (!fs.existsSync(config.logging.FinalLogPath)) {
-    logger.info('Creating folder: ' + config.logging.FinalLogPath);
-    fs.mkdirSync(config.logging.FinalLogPath);
-  }
-  logger.info('Log folder: ' + config.logging.FinalLogPath);
-}
-
-function loadConfig(filename) {
-  // auto create
-  if (!fs.existsSync(filename))
-    fs.closeSync(fs.openSync(filename, 'w'));
-  var RawJson = fs.readFileSync(filename, {
-    encoding: 'utf8'
-  });
-
-  var config = applyDefaults(RawJson === '' ? {} : JSON.parse(RawJson),
-    JSON.parse(fs.readFileSync(DEFAULT_CONFIG_FILENAME)));
-
-  // resolve relative path to absolute
-  config.WebService.FinalPublicPath = path.resolve(__dirname + '/../' + config.WebService.PublicPath);
-  config.logging.FinalLogPath = path.resolve(__dirname + '/../' + config.logging.LogPath);
-
-  return config;
-}
-
-function applyDefaults(config, defaults) {
-  Object.keys(defaults).forEach((key) => {
-    logger.debug('Matching key ' + key);
-    if (key in config) {
-      logger.info('Overriding default key: ' + key);
-      if (typeof defaults[key] === 'object')
-        applyDefaults(config[key], defaults[key]);
-    } else {
-      config[key] = defaults[key];
-    }
-  });
-  return config;
-}
