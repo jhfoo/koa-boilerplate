@@ -3,6 +3,7 @@ const DEFAULT_CONFIG_FILENAME = 'defaults.json',
   CONFIG_FILENAME = 'config.json';
 
 var fs = require('fs'),
+  path = require('path'),
   koa = require('koa'),
   KoaStatic = require('koa-static'),
   router = require('koa-router')(),
@@ -32,6 +33,7 @@ var app = new koa(),
   config = loadConfig(CONFIG_FILENAME);
 
 // include file logging after config is loaded
+logger.debug(config.logging.FinalLogPath);
 log4js.configure({
   appenders: {
     console: {
@@ -39,7 +41,7 @@ log4js.configure({
     },
     file: {
       type: 'file',
-      filename: __dirname + '/' + config.logging.LogPath + '/www.log',
+      filename: config.logging.FinalLogPath + '/www.log',
       maxLogSize: 64 * 1024,
       backups: 7
     }
@@ -56,7 +58,7 @@ autoCreateFolders();
 
 // koa middlewares
 // logger
-app.use(async (ctx, next) => {
+app.use(async(ctx, next) => {
   var start = new Date;
   await next();
   var ms = new Date - start;
@@ -64,15 +66,16 @@ app.use(async (ctx, next) => {
 });
 
 // custom error response
-app.use(async (ctx, next) => {
+app.use(async(ctx, next) => {
   try {
-    await next()  ;
+    await next();
   } catch (err) {
     // some errors will have .status
     // however this is not a guarantee
     ctx.status = err.status || 500;
     ctx.type = 'html';
     ctx.body = '<p>Something <em>exploded</em> (' + err.message + '), please contact someone.</p>';
+    logger.error(err);
 
     // since we handled this manually we'll
     // want to delegate to the regular app
@@ -86,10 +89,10 @@ app.use(async (ctx, next) => {
 app.use(TestRoute.routes());
 // app.use(router.allowedMethods());
 
-app.use(KoaStatic(__dirname + '/' + config.WebService.PublicPath, {
+app.use(KoaStatic(config.WebService.FinalPublicPath, {
   index: 'index.htm'
 }));
-logger.info('Public folder: ' + __dirname + '/' + config.WebService.PublicPath);
+logger.info('Public folder: ' + config.WebService.FinalPublicPath);
 
 // error handler
 app.on('error', function (err) {
@@ -114,15 +117,16 @@ logger.info('Listening on port ' + config.WebService.ServicePort);
 
 function autoCreateFolders() {
   // setup static folder
-  if (!fs.existsSync(__dirname + '/' + config.WebService.PublicPath)) {
-    fs.mkdirSync(__dirname + '/' + config.WebService.PublicPath);
+  if (!fs.existsSync(config.WebService.FinalPublicPath)) {
+    fs.mkdirSync(config.WebService.FinalPublicPath);
   }
 
   // setup log folder
-  if (!fs.existsSync(__dirname + '/' + config.logging.LogPath)) {
-    logger.info('Creating folder: ' + config.logging.LogPath);
-    fs.mkdirSync(__dirname + '/' + config.logging.LogPath);
+  if (!fs.existsSync(config.logging.FinalLogPath)) {
+    logger.info('Creating folder: ' + config.logging.FinalLogPath);
+    fs.mkdirSync(config.logging.FinalLogPath);
   }
+  logger.info('Log folder: ' + config.logging.FinalLogPath);
 }
 
 function loadConfig(filename) {
@@ -133,8 +137,14 @@ function loadConfig(filename) {
     encoding: 'utf8'
   });
 
-  return applyDefaults(RawJson === '' ? {} : JSON.parse(RawJson),
+  var config = applyDefaults(RawJson === '' ? {} : JSON.parse(RawJson),
     JSON.parse(fs.readFileSync(DEFAULT_CONFIG_FILENAME)));
+
+  // resolve relative path to absolute
+  config.WebService.FinalPublicPath = path.resolve(__dirname + '/../' + config.WebService.PublicPath);
+  config.logging.FinalLogPath = path.resolve(__dirname + '/../' + config.logging.LogPath);
+
+  return config;
 }
 
 function applyDefaults(config, defaults) {
