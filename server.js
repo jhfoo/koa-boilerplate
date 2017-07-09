@@ -56,7 +56,7 @@ autoCreateFolders();
 
 // koa middlewares
 // logger
-app.use(async(ctx, next) => {
+app.use(async (ctx, next) => {
   var start = new Date;
   await next();
   var ms = new Date - start;
@@ -64,30 +64,30 @@ app.use(async(ctx, next) => {
 });
 
 // custom error response
-app.use(async(ctx, next) => {
+app.use(async (ctx, next) => {
   try {
-    await next();
+    await next()  ;
   } catch (err) {
     // some errors will have .status
     // however this is not a guarantee
-    this.status = err.status || 500;
-    this.type = 'html';
-    this.body = '<p>Something <em>exploded</em> (' + err.message + '), please contact someone.</p>';
+    ctx.status = err.status || 500;
+    ctx.type = 'html';
+    ctx.body = '<p>Something <em>exploded</em> (' + err.message + '), please contact someone.</p>';
 
     // since we handled this manually we'll
     // want to delegate to the regular app
     // level error handling as well so that
     // centralized still functions correctly.
-    this.app.emit('error', err, this);
+    ctx.app.emit('error', err, this);
   }
 });
 
 // custom responses load here
-// app.use(TestRoute.routes());
+app.use(TestRoute.routes());
 // app.use(router.allowedMethods());
 
 app.use(KoaStatic(__dirname + '/' + config.WebService.PublicPath, {
-  index: 'index.html'
+  index: 'index.htm'
 }));
 logger.info('Public folder: ' + __dirname + '/' + config.WebService.PublicPath);
 

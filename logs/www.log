@@ -166,3 +166,166 @@
 [2017-07-09 11:37:55.469] [INFO] default - Listening on port 8080
 [2017-07-09 11:37:55.714] [DEBUG] default - New Socket.io connection
 [2017-07-09 11:37:55.720] [DEBUG] default - PINGY received: 55
+[2017-07-09 11:40:37.268] [INFO] default - Public folder: E:\JhCodes\koa-boilerplate/www
+[2017-07-09 11:40:37.275] [INFO] default - Listening on port 8080
+[2017-07-09 11:40:37.404] [DEBUG] default - GET /ping - 3
+[2017-07-09 11:40:41.149] [DEBUG] default - GET /ping - 1
+[2017-07-09 11:40:54.622] [INFO] default - Public folder: E:\JhCodes\koa-boilerplate/www
+[2017-07-09 11:40:54.626] [INFO] default - Listening on port 8080
+[2017-07-09 11:40:56.005] [INFO] default - Public folder: E:\JhCodes\koa-boilerplate/www
+[2017-07-09 11:40:56.009] [INFO] default - Listening on port 8080
+[2017-07-09 11:40:56.409] [DEBUG] default - GET /ping - 3
+[2017-07-09 11:41:13.616] [INFO] default - Public folder: E:\JhCodes\koa-boilerplate/www
+[2017-07-09 11:41:13.620] [INFO] default - Listening on port 8080
+[2017-07-09 11:41:15.056] [INFO] default - Public folder: E:\JhCodes\koa-boilerplate/www
+[2017-07-09 11:41:15.060] [INFO] default - Listening on port 8080
+[2017-07-09 11:41:16.749] [ERROR] default - TypeError: Cannot read property 'emit' of undefined
+    at app.use (E:\JhCodes\koa-boilerplate\server.js:81:13)
+    at <anonymous>
+    at runMicrotasksCallback (internal/process/next_tick.js:86:5)
+    at _combinedTickCallback (internal/process/next_tick.js:95:7)
+    at process._tickCallback (internal/process/next_tick.js:161:9)
+[2017-07-09 11:41:26.224] [INFO] default - Public folder: E:\JhCodes\koa-boilerplate/www
+[2017-07-09 11:41:26.227] [INFO] default - Listening on port 8080
+[2017-07-09 11:41:27.473] [INFO] default - Public folder: E:\JhCodes\koa-boilerplate/www
+[2017-07-09 11:41:27.477] [INFO] default - Listening on port 8080
+[2017-07-09 11:41:31.646] [ERROR] default - TypeError: Cannot read property 'emit' of undefined
+    at app.use (E:\JhCodes\koa-boilerplate\server.js:81:13)
+    at <anonymous>
+    at runMicrotasksCallback (internal/process/next_tick.js:86:5)
+    at _combinedTickCallback (internal/process/next_tick.js:95:7)
+    at process._tickCallback (internal/process/next_tick.js:161:9)
+[2017-07-09 11:41:53.379] [INFO] default - Public folder: E:\JhCodes\koa-boilerplate/www
+[2017-07-09 11:41:53.388] [INFO] default - Listening on port 8080
+[2017-07-09 11:41:54.436] [INFO] default - Public folder: E:\JhCodes\koa-boilerplate/www
+[2017-07-09 11:41:54.440] [INFO] default - Listening on port 8080
+[2017-07-09 11:42:31.984] [INFO] default - Public folder: E:\JhCodes\koa-boilerplate/www
+[2017-07-09 11:42:31.989] [INFO] default - Listening on port 8080
+[2017-07-09 11:42:33.194] [INFO] default - Public folder: E:\JhCodes\koa-boilerplate/www
+[2017-07-09 11:42:33.198] [INFO] default - Listening on port 8080
+[2017-07-09 11:42:35.712] [ERROR] default - Error: Oh noes!
+    at router.get (E:\JhCodes\koa-boilerplate\lib\test.js:9:9)
+    at dispatch (E:\JhCodes\koa-boilerplate\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (E:\JhCodes\koa-boilerplate\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at E:\JhCodes\koa-boilerplate\node_modules\koa-router\lib\router.js:345:16
+    at dispatch (E:\JhCodes\koa-boilerplate\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at E:\JhCodes\koa-boilerplate\node_modules\koa-router\node_modules\koa-compose\index.js:36:12
+    at dispatch (E:\JhCodes\koa-boilerplate\node_modules\koa-router\lib\router.js:350:31)
+    at dispatch (E:\JhCodes\koa-boilerplate\node_modules\koa-compose\index.js:42:32)
+    at next (E:\JhCodes\koa-boilerplate\node_modules\koa-compose\index.js:43:18)
+    at app.use (E:\JhCodes\koa-boilerplate\server.js:69:11)
+[2017-07-09 11:42:35.718] [DEBUG] default - GET /error - 14
+[2017-07-09 11:42:58.068] [INFO] default - Public folder: E:\JhCodes\koa-boilerplate/www
+[2017-07-09 11:42:58.072] [INFO] default - Listening on port 8080
+[2017-07-09 11:42:59.416] [INFO] default - Public folder: E:\JhCodes\koa-boilerplate/www
+[2017-07-09 11:42:59.423] [INFO] default - Listening on port 8080
+[2017-07-09 11:43:02.960] [INFO] default - Public folder: E:\JhCodes\koa-boilerplate/www
+[2017-07-09 11:43:02.965] [INFO] default - Listening on port 8080
+[2017-07-09 11:43:04.715] [INFO] default - Public folder: E:\JhCodes\koa-boilerplate/www
+[2017-07-09 11:43:04.720] [INFO] default - Listening on port 8080
+[2017-07-09 11:43:06.018] [DEBUG] default - GET / - 15
+[2017-07-09 11:43:06.174] [DEBUG] default - New Socket.io connection
+[2017-07-09 11:43:06.196] [DEBUG] default - PINGY received: 76
+[2017-07-09 11:44:53.361] [INFO] default - Public folder: E:\JhCodes\koa-boilerplate/www
+[2017-07-09 11:44:53.366] [INFO] default - Listening on port 8080
+[2017-07-09 11:44:54.348] [INFO] default - Public folder: E:\JhCodes\koa-boilerplate/www
+[2017-07-09 11:44:54.352] [INFO] default - Listening on port 8080
+[2017-07-09 11:44:55.031] [DEBUG] default - New Socket.io connection
+[2017-07-09 11:44:55.037] [DEBUG] default - PINGY received: 46
+[2017-07-09 11:47:53.721] [INFO] default - Public folder: E:\JhCodes\koa-boilerplate/www
+[2017-07-09 11:47:53.726] [INFO] default - Listening on port 8080
+[2017-07-09 11:47:54.773] [INFO] default - Public folder: E:\JhCodes\koa-boilerplate/www
+[2017-07-09 11:47:54.777] [INFO] default - Listening on port 8080
+[2017-07-09 11:47:55.034] [DEBUG] default - New Socket.io connection
+[2017-07-09 11:47:55.056] [DEBUG] default - PINGY received: 21
+[2017-07-09 11:50:53.394] [INFO] default - Public folder: E:\JhCodes\koa-boilerplate/www
+[2017-07-09 11:50:53.398] [INFO] default - Listening on port 8080
+[2017-07-09 11:50:54.390] [INFO] default - Public folder: E:\JhCodes\koa-boilerplate/www
+[2017-07-09 11:50:54.394] [INFO] default - Listening on port 8080
+[2017-07-09 11:50:55.032] [DEBUG] default - New Socket.io connection
+[2017-07-09 11:50:55.047] [DEBUG] default - PINGY received: 31
+[2017-07-09 11:53:53.363] [INFO] default - Public folder: E:\JhCodes\koa-boilerplate/www
+[2017-07-09 11:53:53.367] [INFO] default - Listening on port 8080
+[2017-07-09 11:53:54.357] [INFO] default - Public folder: E:\JhCodes\koa-boilerplate/www
+[2017-07-09 11:53:54.362] [INFO] default - Listening on port 8080
+[2017-07-09 11:53:54.530] [DEBUG] default - New Socket.io connection
+[2017-07-09 11:53:54.535] [DEBUG] default - PINGY received: 28
+[2017-07-09 11:56:53.387] [INFO] default - Public folder: E:\JhCodes\koa-boilerplate/www
+[2017-07-09 11:56:53.392] [INFO] default - Listening on port 8080
+[2017-07-09 11:56:54.386] [INFO] default - Public folder: E:\JhCodes\koa-boilerplate/www
+[2017-07-09 11:56:54.389] [INFO] default - Listening on port 8080
+[2017-07-09 11:56:55.034] [DEBUG] default - New Socket.io connection
+[2017-07-09 11:56:55.041] [DEBUG] default - PINGY received: 97
+[2017-07-09 11:59:53.469] [INFO] default - Public folder: E:\JhCodes\koa-boilerplate/www
+[2017-07-09 11:59:53.473] [INFO] default - Listening on port 8080
+[2017-07-09 11:59:54.324] [INFO] default - Public folder: E:\JhCodes\koa-boilerplate/www
+[2017-07-09 11:59:54.328] [INFO] default - Listening on port 8080
+[2017-07-09 11:59:55.031] [DEBUG] default - New Socket.io connection
+[2017-07-09 11:59:55.036] [DEBUG] default - PINGY received: 9
+[2017-07-09 12:02:53.387] [INFO] default - Public folder: E:\JhCodes\koa-boilerplate/www
+[2017-07-09 12:02:53.392] [INFO] default - Listening on port 8080
+[2017-07-09 12:02:54.348] [INFO] default - Public folder: E:\JhCodes\koa-boilerplate/www
+[2017-07-09 12:02:54.352] [INFO] default - Listening on port 8080
+[2017-07-09 12:02:54.534] [DEBUG] default - New Socket.io connection
+[2017-07-09 12:02:54.539] [DEBUG] default - PINGY received: 22
+[2017-07-09 12:05:53.427] [INFO] default - Public folder: E:\JhCodes\koa-boilerplate/www
+[2017-07-09 12:05:53.431] [INFO] default - Listening on port 8080
+[2017-07-09 12:05:54.472] [INFO] default - Public folder: E:\JhCodes\koa-boilerplate/www
+[2017-07-09 12:05:54.477] [INFO] default - Listening on port 8080
+[2017-07-09 12:05:55.032] [DEBUG] default - New Socket.io connection
+[2017-07-09 12:05:55.039] [DEBUG] default - PINGY received: 40
+[2017-07-09 12:08:53.370] [INFO] default - Public folder: E:\JhCodes\koa-boilerplate/www
+[2017-07-09 12:08:53.374] [INFO] default - Listening on port 8080
+[2017-07-09 12:08:54.417] [INFO] default - Public folder: E:\JhCodes\koa-boilerplate/www
+[2017-07-09 12:08:54.422] [INFO] default - Listening on port 8080
+[2017-07-09 12:08:55.031] [DEBUG] default - New Socket.io connection
+[2017-07-09 12:08:55.036] [DEBUG] default - PINGY received: 85
+[2017-07-09 12:11:53.391] [INFO] default - Public folder: E:\JhCodes\koa-boilerplate/www
+[2017-07-09 12:11:53.396] [INFO] default - Listening on port 8080
+[2017-07-09 12:11:54.351] [INFO] default - Public folder: E:\JhCodes\koa-boilerplate/www
+[2017-07-09 12:11:54.355] [INFO] default - Listening on port 8080
+[2017-07-09 12:11:55.035] [DEBUG] default - New Socket.io connection
+[2017-07-09 12:11:55.042] [DEBUG] default - PINGY received: 94
+[2017-07-09 12:14:53.377] [INFO] default - Public folder: E:\JhCodes\koa-boilerplate/www
+[2017-07-09 12:14:53.381] [INFO] default - Listening on port 8080
+[2017-07-09 12:14:54.348] [INFO] default - Public folder: E:\JhCodes\koa-boilerplate/www
+[2017-07-09 12:14:54.352] [INFO] default - Listening on port 8080
+[2017-07-09 12:14:55.034] [DEBUG] default - New Socket.io connection
+[2017-07-09 12:14:55.039] [DEBUG] default - PINGY received: 16
+[2017-07-09 12:17:53.472] [INFO] default - Public folder: E:\JhCodes\koa-boilerplate/www
+[2017-07-09 12:17:53.476] [INFO] default - Listening on port 8080
+[2017-07-09 12:17:54.419] [INFO] default - Public folder: E:\JhCodes\koa-boilerplate/www
+[2017-07-09 12:17:54.424] [INFO] default - Listening on port 8080
+[2017-07-09 12:17:54.532] [DEBUG] default - New Socket.io connection
+[2017-07-09 12:17:54.538] [DEBUG] default - PINGY received: 12
+[2017-07-09 12:20:43.326] [INFO] default - Public folder: E:\JhCodes\koa-boilerplate/www
+[2017-07-09 12:20:43.330] [INFO] default - Listening on port 8080
+[2017-07-09 12:20:44.592] [INFO] default - Public folder: E:\JhCodes\koa-boilerplate/www
+[2017-07-09 12:20:44.595] [INFO] default - Listening on port 8080
+[2017-07-09 12:20:44.683] [DEBUG] default - GET / - 8
+[2017-07-09 12:20:44.707] [DEBUG] default - New Socket.io connection
+[2017-07-09 12:20:44.812] [DEBUG] default - New Socket.io connection
+[2017-07-09 12:20:44.848] [DEBUG] default - PINGY received: 98
+[2017-07-09 12:20:47.215] [DEBUG] default - GET /ping - 2
+[2017-07-09 12:20:48.684] [DEBUG] default - New Socket.io connection
+[2017-07-09 12:20:48.703] [DEBUG] default - PINGY received: 12
+[2017-07-09 12:20:49.689] [ERROR] default - Error: Oh noes!
+    at router.get (E:\JhCodes\koa-boilerplate\lib\test.js:9:9)
+    at dispatch (E:\JhCodes\koa-boilerplate\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (E:\JhCodes\koa-boilerplate\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at E:\JhCodes\koa-boilerplate\node_modules\koa-router\lib\router.js:345:16
+    at dispatch (E:\JhCodes\koa-boilerplate\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at E:\JhCodes\koa-boilerplate\node_modules\koa-router\node_modules\koa-compose\index.js:36:12
+    at dispatch (E:\JhCodes\koa-boilerplate\node_modules\koa-router\lib\router.js:350:31)
+    at dispatch (E:\JhCodes\koa-boilerplate\node_modules\koa-compose\index.js:42:32)
+    at next (E:\JhCodes\koa-boilerplate\node_modules\koa-compose\index.js:43:18)
+    at app.use (E:\JhCodes\koa-boilerplate\server.js:69:11)
+[2017-07-09 12:20:49.696] [DEBUG] default - GET /error - 12
+[2017-07-09 12:20:51.214] [DEBUG] default - New Socket.io connection
+[2017-07-09 12:20:51.236] [DEBUG] default - PINGY received: 47
+[2017-07-09 12:20:53.443] [INFO] default - Public folder: E:\JhCodes\koa-boilerplate/www
+[2017-07-09 12:20:53.449] [INFO] default - Listening on port 8080
+[2017-07-09 12:20:54.429] [INFO] default - Public folder: E:\JhCodes\koa-boilerplate/www
+[2017-07-09 12:20:54.433] [INFO] default - Listening on port 8080
+[2017-07-09 12:20:54.497] [DEBUG] default - New Socket.io connection
+[2017-07-09 12:20:54.502] [DEBUG] default - PINGY received: 65
