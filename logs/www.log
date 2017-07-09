@@ -142,3 +142,27 @@
 [2017-07-09 11:36:42.777] [DEBUG] default - GET /index.html - 7
 [2017-07-09 11:36:42.952] [DEBUG] default - New Socket.io connection
 [2017-07-09 11:36:42.993] [DEBUG] default - PINGY received: 4
+[2017-07-09 11:37:17.812] [INFO] default - Public folder: E:\JhCodes\koa-boilerplate/www
+[2017-07-09 11:37:17.816] [INFO] default - Listening on port 8080
+[2017-07-09 11:37:18.015] [DEBUG] default - New Socket.io connection
+[2017-07-09 11:37:18.022] [DEBUG] default - PINGY received: 1
+[2017-07-09 11:37:25.829] [INFO] default - Public folder: E:\JhCodes\koa-boilerplate/www
+[2017-07-09 11:37:25.835] [INFO] default - Listening on port 8080
+[2017-07-09 11:37:26.022] [DEBUG] default - New Socket.io connection
+[2017-07-09 11:37:26.027] [DEBUG] default - PINGY received: 67
+[2017-07-09 11:37:35.048] [INFO] default - Public folder: E:\JhCodes\koa-boilerplate/www
+[2017-07-09 11:37:35.055] [INFO] default - Listening on port 8080
+[2017-07-09 11:37:35.536] [DEBUG] default - New Socket.io connection
+[2017-07-09 11:37:35.541] [DEBUG] default - PINGY received: 49
+[2017-07-09 11:37:36.484] [INFO] default - Public folder: E:\JhCodes\koa-boilerplate/www
+[2017-07-09 11:37:36.489] [INFO] default - Listening on port 8080
+[2017-07-09 11:37:37.014] [DEBUG] default - New Socket.io connection
+[2017-07-09 11:37:37.020] [DEBUG] default - PINGY received: 11
+[2017-07-09 11:37:53.975] [INFO] default - Public folder: E:\JhCodes\koa-boilerplate/www
+[2017-07-09 11:37:53.979] [INFO] default - Listening on port 8080
+[2017-07-09 11:37:54.589] [DEBUG] default - New Socket.io connection
+[2017-07-09 11:37:54.594] [DEBUG] default - PINGY received: 56
+[2017-07-09 11:37:55.465] [INFO] default - Public folder: E:\JhCodes\koa-boilerplate/www
+[2017-07-09 11:37:55.469] [INFO] default - Listening on port 8080
+[2017-07-09 11:37:55.714] [DEBUG] default - New Socket.io connection
+[2017-07-09 11:37:55.720] [DEBUG] default - PINGY received: 55
